@@ -1,0 +1,14 @@
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.card ul {
+  padding-left: 0;
+}
+
+.card .byline {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
