@@ -94,6 +94,7 @@ textarea:not([rows]) {
 }
 
 /** Custom fonts */
+
 /* figtree-600 - latin */
 @font-face {
   font-display: swap;
@@ -110,4 +111,25 @@ textarea:not([rows]) {
   font-style: normal;
   font-weight: 800;
   src: url('/fonts/figtree-v5-latin-800.woff2') format('woff2');
+}
+
+/** Utilities */
+
+.visually-hidden:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, 1rem);
 }

@@ -11,4 +11,12 @@
 body {
   background-color: hsl(var(--clr-yellow));
   color: hsl(var(--clr-black));
+  margin: 0;
+}
+
+main {
+  padding-inline: 24px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }

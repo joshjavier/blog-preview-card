@@ -1,14 +1,75 @@
 .card {
   background-color: #fff;
   border-radius: 20px;
+  padding: 24px;
+  max-width: 384px;
+  position: relative;
+  border: 1px solid hsl(var(--clr-black));
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(var(--clr-black));
+  top: 8px;
+  left: 8px;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.card .image {
+  /* 200px tall, but shrink on screens <375px wide to maintain good aspect ratio */
+  height: clamp(10rem, -4.5455rem + 72.7273vw, 12.5rem);
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.card .content {
+  margin-top: 24px;
 }
 
 .card ul {
-  padding-left: 0;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+
+.card .tags,
+.card .pubdate {
+  /* Grows from 12px to 14px */
+  font-size: clamp(0.75rem, -0.0724rem + 3.5088vw, 0.875rem);
+}
+
+.card .pubdate {
+  margin-block-start: 14px;
+  letter-spacing: -0.06px;
+}
+
+.card .title {
+  /* Grows from 20px to 24px */
+  font-size: clamp(1.25rem, -0.3947rem + 7.0175vw, 1.5rem);
+  margin-block-start: 18px;
+}
+
+.card .description {
+  margin-block-start: 16px;
+  color: hsl(var(--clr-grey));
+  /* Grows from 14px to 16px */
+  font-size: clamp(0.875rem, 0.0526rem + 3.5088vw, 1rem);
+  letter-spacing: -0.07px;
 }
 
 .card .byline {
   display: flex;
   gap: 12px;
   align-items: center;
+  margin-block-start: 24px;
+  font-size: 14px;
 }
